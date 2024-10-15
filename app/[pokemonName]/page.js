@@ -21,32 +21,32 @@ export default async function Pokemon({ params }) {
                     <div>
                         <span className="font-bold">Type: </span>
                         {
-                            pokemonInfo?.types?.map(type => (
-                                <span>{type?.type?.name}, </span>
+                            pokemonInfo?.types?.map((type, index) => (
+                                <span key={index}>{type?.type?.name}, </span>
                             ))
                         }
                     </div>
                     <div>
                         <span className="font-bold">Stats: </span>
                         {
-                            pokemonInfo?.stats?.map(stats => (
-                                <span>{stats?.stat?.name}, </span>
+                            pokemonInfo?.stats?.map((stats, index) => (
+                                <span key={index}>{stats?.stat?.name}, </span>
                             ))
                         }
                     </div>
                     <div>
                         <span className="font-bold">abilities: </span>
                         {
-                            pokemonInfo?.abilities?.map(ability => (
-                                <span>{ability?.ability?.name}, </span>
+                            pokemonInfo?.abilities?.map((ability, index) => (
+                                <span key={index}>{ability?.ability?.name}, </span>
                             ))
                         }
                     </div>
                     <div>
                         <span className="font-bold">Some moves: </span>
                         {
-                            pokemonInfo?.moves?.slice(0, 5)?.map(move => (
-                                <span>{move?.move?.name}, </span>
+                            pokemonInfo?.moves?.slice(0, 5)?.map((move, index) => (
+                                <span key={index}>{move?.move?.name}, </span>
                             ))
                         }
                     </div>
