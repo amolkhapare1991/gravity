@@ -10,11 +10,9 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
   const {pokemonList} = usePokemonSearch(selectedType, searchTerm);
 
-  console.log(333, pokemonList)
-
   return (
     <main>
-      <Form types={types} setSelectedType={setSelectedType} setSearchTerm={setSearchTerm}/>
+      <Form types={types} setSelectedType={setSelectedType} setSearchTerm={setSearchTerm} selectedType={selectedType}/>
       {pokemonList && <PokemonList list={pokemonList}/>}
     </main>
   );
